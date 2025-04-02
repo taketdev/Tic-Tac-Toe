@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <title>Tic Tac Toe</title>
 </head>
-<body>
-    
+<body onload="render()">
+    <h1>Tic Tac Toe</h1>
+
+<div id="content">
+  <div id="status"></div>
+  <div id="board-wrapper">
+    <div id="win-line"></div>
+  </div>
+  <button id="restart-button" onclick="restartGame()" style="display: none;">Neustarten</button>
+</div>
+
+
+    <script src="./script.js"></script>
 </body>
 </html>

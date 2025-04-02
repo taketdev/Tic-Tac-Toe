@@ -1,0 +1,106 @@
+/* Ganze Seite */
+body {
+  background-color: #323232;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertikal zentrieren */
+  align-items: center;     /* horizontal zentrieren */
+  height: 100vh;           /* ganze Höhe */
+  min-height: 100vh;  
+  margin: 0;
+}
+
+
+/* Überschrift */
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+/* Status & Button */
+#status {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#restart-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #323232;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Spielfeld-Container */
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#board-wrapper {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* Tabelle */
+table {
+  border-collapse: collapse;
+}
+
+/* Zellen */
+td {
+  border: 5px solid white;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 0;
+}
+td:hover {
+  background-color: #444444;
+}
+
+/* Nur innere Trennlinien */
+table tr:first-child td {
+  border-top: none;
+}
+table tr:last-child td {
+  border-bottom: none;
+}
+table tr td:first-child {
+  border-left: none;
+}
+table tr td:last-child {
+  border-right: none;
+}
+
+/* Gewinn-Linie */
+#win-line {
+  position: absolute;
+  height: 5px;
+  background-color: white;
+  transform-origin: center;
+  display: none;
+  z-index: 2;
+}
+
+@keyframes drawLine {
+  to {
+    width: 210px;
+    opacity: 1;
+  }
+}
